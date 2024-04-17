@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+    /* Primary */
+    --Nutmeg: hsl(14, 45%, 36%);
+    --Dark-Raspberry: hsl(332, 51%, 32%);
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+
+    /* font-size: 16px; */
+}
+
+/* --- GENERAL STYLES --- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.subtitle {
+    font-family: "Young Serif", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--Nutmeg);
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+}
+
+body {
+    width: 100%;
+    background-color: var(--Eggshell);
+    font-family: "Outfit", sans-serif;
+    color: var(--Wenge-Brown);
+    font-weight: 400;
+}
+
+/* --- CONTAINER --- */
+
+.container {
+    width: 80%;
+    margin: 60px auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    background-color: var(--White);
+    border-radius: 30px;
+}
+
+/* --- PRESENTATION --- */
+
+.container__img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+.container__title {
+    font-size: 2.5rem;
+    font-family: "Young Serif", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: var(--Dark-Charcoal)
+}
+
+.container__overview {
+    font-size: 1.25rem;
+}
+
+/* --- PREPARATION, INGREDIENTS & INSTRUCTIONS--- */
+
+.container__preparation {
+    width: 100%;
+    background-color: var(--Rose-White);
+    padding: 1.25rem;
+    border-radius: 15px;
+}
+
+.preparation__title {
+    color: var(--Dark-Raspberry);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.preparation__list,
+.ingredients__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0px 25px;
+}
+
+.preparation__item::marker,
+.ingredients__item::marker,
+.instructions__item::marker {
+    color: var(--Nutmeg);
+    font-weight: bold;
+}
+
+.preparation__item,
+.ingredients__item,
+.instructions__item {
+    padding-inline-start: 1.25rem;
+}
+
+.ingredients__list {
+    list-style-type: square;
+}
+
+.instructions__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0px 25px;
+}
+
+/* --- NUTRITION --- */
+
+.nutrition__description {
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+}
+
+.nutrition__table {
+    width: 100%;
+}
+
+.nutrition__table td {
+    padding: 15px;
+}
+
+.line__bb {
+    border-bottom: 1px solid var(--Light-Grey);
+}
+
+.nutrition__value {
+    color: var(--Nutmeg);
+    font-weight: bold;
+}
+
+
+@media (max-width: 375px) {
+    :root {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 0 0 40px 0;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0px;
+    }
+
+    .container__img {
+        border-radius: 0px;
+    }
+
+    .container__title,
+    .container__overview,
+    .container__ingredients,
+    .container__instructions,
+    .container__nutrition {
+        padding: 0px 20px;
+    }
+
+    .container__preparation,
+    .container__separation {
+        width: 90%;
+        margin: auto;
+    }
+
+}
